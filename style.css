@@ -13,7 +13,7 @@ header {
     color: #333333; /* Dark gray text color for contrast */
     padding: 10px;
     text-align: center;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
     animation: slideDown 1s ease-in-out;
@@ -65,11 +65,16 @@ footer {
     background-color: #457b9d; /* Soft blue background for the footer */
     color: #f1faee; /* Light text color for contrast */
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    padding: 2px;
+    position:relative;
     bottom: 0;
     width: 100%;
-    animation: fadeInUp 1s ease-in-out 1.5s forwards;
+    transition: transform 0.3s ease-in-out;
+    font-size: small;
+}
+
+footer.hidden {
+    transform: translateY(100%);
 }
 
 /* Responsive Images */
